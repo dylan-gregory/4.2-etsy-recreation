@@ -19,6 +19,14 @@
             </span>
           </div>
         </div>
+        <div class="top-right">
+            <a href="#">Sell on Etsy</a>
+            <a href="">Register</a>
+            <button type="button" class='btn'>Sign in</button>
+            <!-- have to tweak this a bit -->
+            <div class="cart-holder"><a><img src="" alt="">Cart</a>
+            </div>
+        </div>
 
     </header>
     <!-- these will later be dropdown-like menus -->
@@ -34,6 +42,41 @@
         <a href="">Vintage</a>
       </div>
     </div>
+
+    <div class="wrapper">
+      <div class="container">
+        <div id="tile-container" class="row">
+          <!-- <div class="col-md-3">
+            <img src="" alt="">
+            <footer>
+              <span class="title"></span>
+              <span class="shop-name"></span>
+              <span class="price"></span>
+            </footer>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  <script id="tile-template" type="text/x-handlebars-template">
+    <div class="col-md-3">
+      <a href="">
+      <img src="{{ image }}" alt="">
+      <footer>
+        <span class="title">{{ title }}</span>
+        <span class="shop-name"></span>
+        <span class="price"></span>
+      </footer>
+      </a>
+    </div>
+  </script>
+
+
 
     <script src="js/bundle.js"></script>
   </body>
