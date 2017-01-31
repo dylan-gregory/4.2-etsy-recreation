@@ -45,7 +45,12 @@
 
     <div class="wrapper">
       <div class="container">
-        <div id="tile-container" class="row">
+        <div class="col-md-2 side-bar">
+
+
+        </div>
+        <div class="col-md-10 item-space">
+          <div id="tile-container" class="row">
           <!-- <div class="col-md-3">
             <img src="" alt="">
             <footer>
@@ -54,6 +59,7 @@
               <span class="price"></span>
             </footer>
           </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -64,15 +70,15 @@
 
 
   <script id="tile-template" type="text/x-handlebars-template">
-    <div class="col-md-3">
-      <a href="">
+    <div class="col-md-3 item-tile">
+      <div>
       <img src="{{ image }}" alt="">
-      <footer>
-        <span class="title">{{ title }}</span>
-        <span class="shop-name"></span>
-        <span class="price"></span>
-      </footer>
-      </a>
+      <div class="footer">
+        <div class="title">{{ title }}</div>
+        <span class="shop-name">{{ shop }}</span>
+        <span class="price">{{ price }}</span>
+      </div>
+    </div>
     </div>
   </script>
 

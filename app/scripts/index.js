@@ -45,10 +45,12 @@ fetchJSONP(url, function(data) {
 
   var content = {
     title: etsy.title,
-    image: etsy.Images[0].url_75x75,
-    price: etsy.price
+    image: etsy.Images[0].url_170x135,
+    price: etsy.price,
+    shop: etsy.Shop.shop_name
 
     }
+    console.log(etsy)
 
 $('#tile-container').append(template(content));
 
