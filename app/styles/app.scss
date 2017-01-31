@@ -1,0 +1,78 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body{
+  background-color: #F5F5F1;
+
+}
+a{
+  text-decoration: none;
+
+}
+
+header{
+  background-color: white;
+  height: 80px;
+  border-bottom: 1px solid #DBDBD8;
+
+  span{
+  font-family: "Times New Roman";
+  color: #F46400;
+  font-size: 40px;
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 10px;
+  }
+  .btn{
+    background-color: #34A8C4;
+    color: white;
+    border: 1px solid #2F98B1;
+    font-family: "Helvetica";
+  }
+  .input-group{
+    width: 35%;
+    margin-left: 120px;
+    vertical-align: top;
+    bottom: 40px;
+
+
+  }
+  .search-bar{
+    // display: inline-block;
+  }
+}
+
+
+.quick-categories{
+  height: 43px;
+  background-color: white;
+  border-bottom: 1px solid #DBDBD8;
+  color: #777777;
+
+  .broad-cat{
+    margin-left: 37px;
+    padding-top: 8px;
+  }
+
+  a{
+    font-size: 17px;
+    color: #777777;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+}
