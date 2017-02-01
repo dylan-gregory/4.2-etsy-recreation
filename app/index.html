@@ -24,7 +24,8 @@
             <a href="">Register</a>
             <button type="button" class='btn'>Sign in</button>
             <!-- have to tweak this a bit -->
-            <div class="cart-holder"><a><img src="" alt="">Cart</a>
+            <div class="cart-holder"><img class="cart-pic" src="http://jamieudaho.github.io/assignment10/images/carticon.png" alt="">
+              <a class="cart-label">Cart</a>
             </div>
         </div>
 
@@ -44,10 +45,12 @@
     </div>
 
     <div class="wrapper">
-      <div class="container page-layout">
-        <div class="col-md-2 side-bar">
+      <div class="container-fluid page-layout">
+
+        <div class="col-lg-2 side-bar">
+          <h3>Show results for:</h3>
           <div class="side-top">
-            <h3>Show results for:</h3>
+
             <div class="categories-box">
               <h3>All categories</h3>
               <ol class="categories">
@@ -68,7 +71,10 @@
                 <a href="">Toys &amp; Games</a>
               </ol>
             </div>
-            <h3>Refine your search:</h3>
+          </div>
+          <h3>Refine your search:</h3>
+          <div class="side-bottom">
+
             <div class="refine-search">
               <h3>Shop location</h3>
               <div class="radio">
@@ -136,11 +142,61 @@
                   <a href="">United States</a>
                 </label>
               </div>
+              <input id="search-filter-min-price-input" type="text" placeholder="Low" class="input price-input" name="min" value="">
+              <span>to</span>
+              <input id="search-filter-max-price-input" type="text" placeholder="High" class="input price-input" name="max" value="">
+              <button class="btn btn-secondary display-block price-submit">
+                <span class="ss-icon icon-smaller icon-t-1 ss-directright" aria-hidden="true"></span>
+                <span class="screen-reader-only">Submit price range</span>
+              </button>
+              <hr>
+              <div class="">
+                <h3>Filter by color</h3>
+                <ul class="color-select">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <hr>
+              <h3>Ordering options</h3>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Option one is this and that&mdash;be sure to include why it's great
+                </label>
+              </div>
+              <div class="checkbox disabled">
+                <label>
+                  <input type="checkbox" value="" disabled>
+                  Option two is disabled
+                </label>
+              </div>
+              <hr>
+              <h3>Ship to</h3>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dropdown
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
 
             </div>
           </div>
         </div>
-        <div class="col-md-10 item-space">
+        <div class="col-lg-10 item-space">
           <div id="tile-container" class="row">
           <!-- <div class="col-md-3">
             <img src="" alt="">
@@ -161,14 +217,16 @@
 
 
   <script id="tile-template" type="text/x-handlebars-template">
-    <div class="col-md-3 item-tile">
+    <div class="col-lg-3 item-tile">
       <div class="item-square">
+        <a>
       <img src="{{ image }}" alt="">
       <div class="footer">
         <div class="title">{{ title }}</div>
         <span class="shop-name">{{ shop }}</span>
         <span class="price">${{ price }}</span>
       </div>
+    </a>
     </div>
     </div>
   </script>

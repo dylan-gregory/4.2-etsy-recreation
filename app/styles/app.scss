@@ -1,7 +1,7 @@
 
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-$grid-gutter-width: 25px;
+$grid-gutter-width: 20px;
 
 
 // Import Bootstrap
@@ -27,15 +27,16 @@ a{
 
 }
 
+.page-layout{
+  margin: 20px;
+
+}
+
 header{
   background-color: white;
   height: 80px;
   border-bottom: 1px solid #DBDBD8;
 
-// To select the container and try to adjust the margins to 0
-.page-layout{
-  margin: 0;
-}
 
   span{
   font-family: "Times New Roman";
@@ -49,7 +50,7 @@ header{
     background-color: #34A8C4;
     color: white;
     border: 1px solid #2F98B1;
-    font-family: "Helvetica";
+    font-family: "Helvetica Neue";
   }
   .input-group{
     width: 35%;
@@ -62,6 +63,11 @@ header{
   .search-bar{
     // display: inline-block;
   }
+}
+
+.cart-pic{
+  max-width: 25px;
+
 }
 
 
@@ -89,13 +95,38 @@ header{
   position: relative;
   bottom: 75px;
 
+  img{
+    position: relative;
+    bottom: 40px;
+    // border-left: 1px solid grey;
+  }
+  a{
+    margin-right: 20px;
+  }
+
+  .btn{
+    margin-right: 95px;
+    color: #34A8C4;
+    border: 1px solid #34A8C4;
+    background-color: white;
+  }
+
+
+  .cart-label{
+    font-size: 13px;
+    position: relative;
+    bottom: 17px;
+    right: 28px;
+  }
+
 }
 
 
 .item-tile{
-  max-height: 223px;
+  // max-height: 223px;
   overflow: hidden;
-  width: 222px;
+  // width: 222px;
+  padding: 0px;
   margin-bottom: 24px;
 
   .title{
@@ -106,6 +137,9 @@ header{
 
   a{
     width:100%;
+    color: black;
+    text-decoration: none;
+
   }
   img{
     width: 100%;
@@ -114,21 +148,58 @@ header{
   }
 
   .footer{
+    position: relative;
     background-color: white;
     height: 47px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-bottom: 10px;
+    padding: 5px;
   }
+
+  .shop-name{
+    color: #9B9595;
+
+  }
+
 
 }
 
 .item-square{
+  position: relative;
   border: 1px solid #E1E3DF;
-  // border-radius: 20px;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 
-//text overflow - whitespace no wrap for
+// .side-bar{
+//   background-color: white;
+//
+// }
+
+// .item-space{
+// // margin-right: -60px;
+// }
+
+.price{
+  color: #80C042;
+  float: right;
+  margin-right: 10px;
+}
+
+h3{
+  font-size: 15px;
+}
+
+.side-top{
+  background-color: white;
+  margin-bottom: 10px;
+  height: 407px;
+}
+
+.side-bottom{
+  background-color: white;
+}
