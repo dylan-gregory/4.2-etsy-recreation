@@ -1,6 +1,8 @@
 
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+$grid-gutter-width: 25px;
+
 
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
@@ -29,6 +31,11 @@ header{
   background-color: white;
   height: 80px;
   border-bottom: 1px solid #DBDBD8;
+
+// To select the container and try to adjust the margins to 0
+.page-layout{
+  margin: 0;
+}
 
   span{
   font-family: "Times New Roman";
@@ -86,8 +93,10 @@ header{
 
 
 .item-tile{
-  height: 223px;
+  max-height: 223px;
   overflow: hidden;
+  width: 222px;
+  margin-bottom: 24px;
 
   .title{
   white-space: nowrap;
@@ -110,8 +119,16 @@ header{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-bottom: 10px;
   }
 
 }
+
+.item-square{
+  border: 1px solid #E1E3DF;
+  // border-radius: 20px;
+  margin-bottom: 20px;
+}
+
 
 //text overflow - whitespace no wrap for

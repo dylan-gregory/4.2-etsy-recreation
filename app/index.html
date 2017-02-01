@@ -44,10 +44,101 @@
     </div>
 
     <div class="wrapper">
-      <div class="container">
+      <div class="container page-layout">
         <div class="col-md-2 side-bar">
+          <div class="side-top">
+            <h3>Show results for:</h3>
+            <div class="categories-box">
+              <h3>All categories</h3>
+              <ol class="categories">
+                <a href="">Jewelry</a>
+                <a href="">Bags &amp; Purses</a>
+                <a href="">Accessories</a>
+                <a href="">Craft Supplies &amp; Tools</a>
+                <a href="">Shoes</a>
+                <a href="">Clothing</a>
+                <a href="">Electronics &amp; Accessories</a>
+                <a href="">Home &amp; Living</a>
+                <a href="">Books, Movies &amp; Music</a>
+                <a href="">Bath &amp; Beauty</a>
+                <a href="">Pet Supplies</a>
+                <a href="">Art &amp; Collectibles</a>
+                <a href="">Weddings</a>
+                <a href="">Paper &amp; Party Supplies</a>
+                <a href="">Toys &amp; Games</a>
+              </ol>
+            </div>
+            <h3>Refine your search:</h3>
+            <div class="refine-search">
+              <h3>Shop location</h3>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  Anywhere
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
+              <a href="">Choose custom location</a>
+              <hr>
+              <h3>Item type</h3>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
+              <hr>
+              <h3>Price ($)</h3>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <a href="">United States</a>
+                </label>
+              </div>
 
-
+            </div>
+          </div>
         </div>
         <div class="col-md-10 item-space">
           <div id="tile-container" class="row">
@@ -71,12 +162,12 @@
 
   <script id="tile-template" type="text/x-handlebars-template">
     <div class="col-md-3 item-tile">
-      <div>
+      <div class="item-square">
       <img src="{{ image }}" alt="">
       <div class="footer">
         <div class="title">{{ title }}</div>
         <span class="shop-name">{{ shop }}</span>
-        <span class="price">{{ price }}</span>
+        <span class="price">${{ price }}</span>
       </div>
     </div>
     </div>
