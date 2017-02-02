@@ -5801,7 +5801,7 @@ header {
   max-width: 25px; }
 
 .quick-categories {
-  height: 43px;
+  padding-bottom: 10px;
   background-color: white;
   border-bottom: 1px solid #DBDBD8;
   color: #777777; }
@@ -5834,10 +5834,17 @@ header {
     bottom: 17px;
     right: 28px; }
 
+@media (max-width: 768px) {
+  .top-right a {
+    display: none; }
+
+  .side-bar {
+    display: none; } }
 .item-tile {
   overflow: hidden;
   padding: 0px;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  max-width: 100%; }
   .item-tile .title {
     white-space: nowrap;
     overflow: hidden;
@@ -5872,6 +5879,9 @@ header {
   box-shadow: 2px 9px 13px 0px #8a8a8a;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
+
+.side-bar {
+  max-width: 100%; }
 
 .price {
   color: #80C042;
