@@ -2,6 +2,53 @@
 var handlebars = require('handlebars');
 var _ = require('underscore');
 var $ = require('jquery');
+// require('bootstrap-sass');
+ // = window.$ = window.Jquery =
+
+
+//$.ajax('https://swapi.co/api...').done(function(data){
+//
+//   var planetList = data.results;
+//   displayPlanets(planetList):
+//
+// })
+//
+// function displayPlanets(planetList){
+//   var source = $().html();
+//   var template = Handlebars.compile(source);
+//
+//   _.each(planetList, function(planet){
+//
+//     $('#planet-list').append(template(planet));
+//   });
+//
+// }
+
+
+
+var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=leather&includes=Images,Shop&sort_on=score";
+
+var source = $('#tile-template').html();
+var template = handlebars.compile(source);
+
+console.log(template);
+
+fetchJSONP(url, function(data) {
+    _.each(data.results, function(etsy){
+
+      var content = {
+      title: etsy.title,
+      image: etsy.Images[0].url_170x135,
+      price: etsy.price,
+      shop: etsy.Shop.shop_name
+
+      }
+      console.log(etsy)
+
+    $('#tile-container').append(template(content));
+
+    })
+});
 
 
 /*
@@ -31,39 +78,6 @@ var $ = require('jquery');
 
       fetchJSONP(url, logData);
 */
-
-
-var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=leather&includes=Images,Shop&sort_on=score";
-
-var source = $('#tile-template').html();
-var template = handlebars.compile(source);
-
-console.log(template);
-
-fetchJSONP(url, function(data) {
-  _.each(data.results, function(etsy){
-
-  var content = {
-    title: etsy.title,
-    image: etsy.Images[0].url_170x135,
-    price: etsy.price,
-    shop: etsy.Shop.shop_name
-
-    }
-    console.log(etsy)
-
-$('#tile-container').append(template(content));
-
-})
-});
-
-
-
-
-
-
-
-
 
 
 

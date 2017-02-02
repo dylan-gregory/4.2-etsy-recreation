@@ -72,7 +72,7 @@ header{
 
 
 .quick-categories{
-  height: 43px;
+  padding-bottom: 10px;
   background-color: white;
   border-bottom: 1px solid #DBDBD8;
   color: #777777;
@@ -121,6 +121,17 @@ header{
 
 }
 
+@media (max-width:768px) {
+  .top-right a{
+    display: none;
+  }
+
+  .side-bar{
+    display: none;
+  }
+
+}
+
 
 .item-tile{
   // max-height: 223px;
@@ -128,6 +139,7 @@ header{
   // width: 222px;
   padding: 0px;
   margin-bottom: 24px;
+  max-width: 100%;
 
   .title{
   white-space: nowrap;
@@ -183,10 +195,10 @@ transition: opacity 0.3s ease-in-out;
 }
 
 
-// .side-bar{
-//   background-color: white;
-//
-// }
+.side-bar{
+  max-width: 100%;
+
+}
 
 // .item-space{
 // // margin-right: -60px;
@@ -253,3 +265,11 @@ h3{
   border: 1px solid black;
   }
 }
+
+
+
+//Bootstrap review stuff
+// you can specify more than one column layout in naming it -
+// col-xs-6 to maintain the same layout,
+// "col-xs-6 col-md-8 col-lg-12" or whatever
+//left side bar visible-md col-md-3
